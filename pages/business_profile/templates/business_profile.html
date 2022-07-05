@@ -1,0 +1,127 @@
+{% extends 'business_base.html' %}
+{% block jsLink %}
+    <script defer src="../../../static/js/general.js"></script>
+{% endblock %}
+{% block title %}Business Profile{% endblock %}
+
+{% block left %}
+    <fieldset class="MyBusinessField">
+        <table>
+            <h1 id="priceList">Avivit's menu:</h1>
+            <tr>
+                <td class="tableHeader"> Service</td>
+                <td class="tableHeader"> &#8362</td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" readonly value="Regular Lak Gel"
+                        maxlength="90" placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" readonly value="70" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" readonly
+                        value="Anatomy Lak Gel (for thicker nails)" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" readonly value="80" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" readonly
+                        value="egular Lak Gel + Russian Manic ure (for dead skin removal)" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" readonly value="85" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" readonly
+                        value="Anatomy Lak Gel (for thicker nails) + Russian Manicure" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" readonly value="95" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" readonly value="Regular Lak Gel"
+                        maxlength="90" placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" readonly value="70" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" readonly
+                        value="Anatomy Lak Gel (for thicker nails)" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" readonly value="80" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" readonly
+                        value="egular Lak Gel + Russian Manic ure (for dead skin removal)" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" readonly value="85" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" readonly
+                        value="Anatomy Lak Gel (for thicker nails) + Russian Manicure" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" readonly value="95" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+
+        </table>
+        <button class="sandMani" type="button" onclick="sandMani()"> Click here to send details to
+            Avivit</button>
+    </fieldset>
+
+{% endblock %}
+{% block up %}
+    <fieldset class="MyBusinessField">
+        <h1>About Avivit:</h1><br>
+        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam mollitia soluta, hic sapiente
+            id nam corporis, delectus, obcaecati voluptate exercitationem eaque molestiae amet! Facere
+            laboriosam tenetur, impedit praesentium dicta esse!</p>
+    </fieldset>
+{% endblock %}
+
+{% block right %}
+    <div class="navDisplay1">
+        <div class="MyImg">
+            <img src="../../../static/media/nails7.jpeg" alt="">
+            <span class="spanStyle"></span>
+        </div>
+        <div class="MyImg">
+            <img src="../../../static/media/nails8.jpeg" alt="">
+            <span class="spanStyle"></span>
+        </div>
+    </div>
+    <div class="navDisplay1">
+        <div class="MyImg">
+            <img src="../../../static/media/nails9.jpeg" alt="">
+            <span class="spanStyle"></span>
+        </div>
+
+        <div class="MyImg">
+            <img src="../../../static/media/nails10.jpeg" alt="">
+            <span class="spanStyle"></span>
+        </div>
+    </div>
+
+    <button id="editProfile" type="button"> <a href="/business_edit">Edit
+            Profile</a></button>
+
+    <div id="rateDiv">
+        <h2>Rate Avivit Here!</h2>
+        <input type="range" value="3" min="1" max="5" oninput="this.nextElementSibling.value = this.value">
+        <output>3</output>
+        <button id="rateBtn" type="button"> Rate</button>
+
+        <br>
+        <h3>Avivit's current rate is- </h3>
+        <div id="rateStars">
+            <i id="star1" class="fa-solid fa-star"></i>
+            <i id="star2" class="fa-solid fa-star"></i>
+            <i id="star3" class="fa-solid fa-star"></i>
+            <i id="star4" class="fa-solid fa-star"></i>
+            <i id="star5" class="fa-solid fa-star"></i>
+        </div>
+    </div>
+{% endblock %}

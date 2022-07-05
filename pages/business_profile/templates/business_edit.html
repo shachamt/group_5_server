@@ -1,0 +1,96 @@
+{% extends 'business_base.html' %}
+{% block jsLink %}
+    <script defer src="../../../static/js/general.js"></script>
+{% endblock %}
+{% block title %}Business Profile{% endblock %}
+
+{% block left %}
+    <fieldset class="MyBusinessField">
+        <table>
+            <h1 id="priceList">Price List 💅🏻</h1>
+            <tr>
+                <td class="tableHeader"> Service</td>
+                <td class="tableHeader"> &#8362</td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="service" name="username" maxlength="90"
+                        placeholder="service"><br></td>
+                <td><input type="number" class="price" name="username" min="0"
+                        oninput="validity.valid||(value='');" placeholder="price"><br></td>
+            </tr>
+        </table>
+    </fieldset>
+{% endblock %}
+{% block up %}
+<fieldset class="MyBusinessField">
+    <h1>About Me:</h1><br>
+    <textarea id="description" cols="5" rows="8"></textarea>
+</fieldset>
+{% endblock %}
+
+{% block right %}
+<div class="navDisplay1">
+    <div>
+        <input type="file" id="addedFile" name="addedFile" accept="image/png, image/jpeg"><br>
+        <span class="spanStyle"></span>
+    </div>
+    <div>
+        <input type="file" id="addedFile" name="addedFile" accept="image/png, image/jpeg"><br>
+        <span class="spanStyle"></span>
+    </div>
+</div>
+    <div class="navDisplay1">
+        <div>
+            <input type="file" id="addedFile" name="addedFile" accept="image/png, image/jpeg"><br>
+            <span class="spanStyle"></span>
+        </div>
+
+        <div>
+            <input type="file" id="addedFile" name="addedFile" accept="image/png, image/jpeg"><br>
+            <span class="spanStyle"></span>
+        </div>
+    </div>
+    <button id="update" type="button" onclick="isValidData()"> Update</button>
+{% endblock %}
