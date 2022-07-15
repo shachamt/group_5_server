@@ -6,7 +6,7 @@ class DBManager:
     __connection = None
     __cursor = None
 
-    def _init_(self):
+    def __init__(self):
         pass
 
     def commit(self, query, args=()):
@@ -39,9 +39,9 @@ class DBManager:
     def __connect(self):
         # Opens a connection to the database.
         try:
-            if not self._connection or not self._connection.is_connected():
+            if not self.__connection or not self.__connection.is_connected():
                 self.__connection = mysql.connector.connect(**DB)
-                self._cursor = self._connection.cursor(named_tuple=True)
+                self.__cursor = self.__connection.cursor(named_tuple=True)
         except mysql.connector.Error as error:
             print("Connection failed with error {}".format(error))
 
